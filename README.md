@@ -1,5 +1,5 @@
 # Wellness_Agent
---------> Problem Statement
+## Problem Statement
 People often struggle to maintain consistent healthy habits. They often wonder what to eat, how much to walk, the intake of water, or how to build simple routines without needing medical advice. While information exists online it can be overwhelming sometimes and not personalized to a daily context. A lightweight conversational assistant that can provide quick guidance can make these everyday wellness tasks much more approachable.
 The problem lies in accessibility and simplicity people want reliable, fast, everyday wellness suggestions without navigating complex apps, large platforms, or heavy interfaces. A small, local, conversational tool reduces friction and improves consistency in following healthier routines.
 
