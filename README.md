@@ -18,10 +18,10 @@ The agent stores recent messages so the LLM can answer in a way that fits the on
 With this architecture, even if external AI calls fail, the agent still works without crashing.
 
 ## Demo
-The project runs in a simple terminal window.
-Start it:
+- The project runs in a simple terminal window.
+- Start it:
 python3 app.py
-Example Interaction
+- Example Interaction
 🌿 Wellness Agent Online 🌿
 Hello, how may I assist you today?
 
