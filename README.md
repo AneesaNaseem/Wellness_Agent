@@ -62,4 +62,3 @@ With more time, I would add:
 •	Reminders or habit tracking
 •	More wellness areas like sleep, stress, and daily routines
 The current version is a solid foundation, and these upgrades would turn it into a more complete personal wellness helper.
-
