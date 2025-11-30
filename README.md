@@ -22,11 +22,11 @@ With this architecture, even if external AI calls fail, the agent still works wi
 - Start it:
 python3 app.py
 - Example Interaction
-🌿 Wellness Agent Online 🌿
-Hello, how may I assist you today?
+- 🌿 Wellness Agent Online 🌿
+- Hello, how may I assist you today?
 
-Here’s something for your day:
-“Your body is your lifelong home, care for it gently.”
+- Here’s something for your day:
+- “Your body is your lifelong home, care for it gently.”
 
 Here's what you can ask me:
 - How many liters of water should I drink today?
@@ -34,11 +34,11 @@ Here's what you can ask me:
 - How much should I walk today?
 - Give me a low-calorie dinner idea.
 
-You: hello
-Agent: Hello! I'm here to support your wellness. Ask me anything 🌿
-You: How much should I walk today?
-Agent: A 30-minute walk is great for cardiovascular health.
-The demo showcases rule execution, fallback behavior, and error-resilient LLM integration.
+- You: hello
+- Agent: Hello! I'm here to support your wellness. Ask me anything 🌿
+- You: How much should I walk today?
+- Agent: A 30-minute walk is great for cardiovascular health.
+- The demo showcases rule execution, fallback behavior, and error-resilient LLM integration.
  
 ## The Build
 The tool is built using:
