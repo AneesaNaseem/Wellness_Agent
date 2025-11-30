@@ -26,25 +26,19 @@ def gemini_reply(prompt: str):
     Safe wrapper for Gemini. If call fails, return a helpful fallback message.
     """
     try:
-        # Use a stable v1 model name that supports generate_content calls.
-        # If your environment requires a different name, change here.
         model = genai.GenerativeModel("models/gemini-1.5-flash-latest")
         response = model.generate_content(prompt)
-        # response may be object with .text or .candidates depending on version
+     
         if hasattr(response, "text"):
             return response.text.strip()
         if hasattr(response, "candidates") and response.candidates:
             return response.candidates[0].content[0].text.strip()
         return str(response)
     except Exception as e:
-        # don't crash the whole app if the API fails; return a sensible fallback
-        # Also print a small debug to stdout (observability)
+        # fallback
         print(f"[LLM ERROR] Gemini call failed: {e}")
         return "Sorry — I'm having trouble reaching the LLM right now. I can still answer simple hydration, nutrition, and exercise questions."
 
-# ---------------------------
-# WellnessAgent (Coordinator)
-# ---------------------------
 # ---------------------------
 # WellnessAgent (Coordinator)
 # ---------------------------
@@ -91,7 +85,7 @@ class WellnessAgent:
             return {"agent": "greeting", "intent": "greet",
                     "message": "Hello! I'm here to support your wellness. Ask me anything 🌿"}
 
-        # meta / capabilities
+        # capabilities
         if "what can you do" in q or "features" in q or "abilities" in q or "what are your features" in q:
             return {
                 "agent": "meta",
@@ -113,7 +107,7 @@ class WellnessAgent:
         if words & {"exercise", "workout", "walk", "run", "stretch", "gym"}:
             return self.exercise.handle(query)
 
-        # fallback to LLM if no rule matched
+        # fallback to LLM 
         return None
 
     def handle_request(self, user: str, query: str):
